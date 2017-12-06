@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="BlendIt">
+<head>
+	<title>Blend It</title>
+	<link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    
+
+</head>
+<body>
+	<!-- <div ng-include="'partials/nav.html'"></div> -->
+	
+
+	<!-- ///////////CONTAINER START/////////// -->
+    <main>
+
+        <div ng-view class="container">
+
+        </div>
+
+    </main>
+
+
+    <!-- ///////////FOOTER START/////////// -->
+    
+    <footer class="footer">
+        <div class="footer-copyright">
+            <div class="container">
+                <p id="copy-footer"> </p>
+            </div>
+        </div>
+    </footer>
+
+	<!-- *****SCRIPTS***** -->
+
+    <!-- JQUERY -->
+    <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- ANGULAR -->
+    <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+   
+
+    <!-- JAVASCRIPTS -->
+    <script src="./app/app.js"></script>
+    
+
+   <!--  FACTORIES -->
+   <script src="./app/factories/user_factory.js"></script>
+   <script src="./app/factories/category_factory.js"></script>
+   <script src="./app/factories/recipe_factory.js"></script>
+    
+
+   <!-- CONTROLLERS -->
+   <script src="./app/controllers/user_ctrl.js"></script>
+   <script src="./app/controllers/category_ctrl.js"></script>
+   <script src="./app/controllers/recipe_ctrl.js"></script>
+   <!-- <script src="./app/controllers/.js"></script> -->
+    
+</body>
+</html>
