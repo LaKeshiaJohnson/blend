@@ -26,7 +26,7 @@ app.config(($routeProvider) => {
 	})
 	.when('/category/:id', {
 		templateUrl: 'partials/single_category.html',
-		controller: 'recipeCtrl',
+		controller: 'recipeInCatCtrl',
 			//resolve: {isAuth}
 	})
 	.when('/recipe/:id', {

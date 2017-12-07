@@ -2,7 +2,7 @@
 
 console.log("category_ctrl.js is loading");
 
-app.controller("categoryCtrl", function ($scope, $route, categoryFactory, $location, $window) {
+app.controller("categoryCtrl", function ($scope, $route, categoryFactory, $location, $routeParams) {
 	$scope.category = [];
 	//let user = authFactory.getCurrentUser();
 	//$rootScope.showSearch = true;
@@ -15,16 +15,7 @@ app.controller("categoryCtrl", function ($scope, $route, categoryFactory, $locat
 		});
 	};
 
-	/*const showSingleCategory = function (id) {
-		categoryFactory.getSingleCategory(id)
-		.then((category) => {
-			$scope.category = category;
-		});
-	};*/
-
-
 
 	showAllCategories();
-	//showSingleCategory();
 
 });

@@ -4,16 +4,20 @@ console.log("recipe_ctrl.js is loading");
 
 app.controller("recipeCtrl", function ($scope, $route, $routeParams, recipeFactory, $location) {
 	
-	$scope.recipesInCategory = [];
+	$scope.recipe = [];
+	//let user = authFactory.getCurrentUser();
+	//$rootScope.showSearch = true;
+    //$scope.searchText = filterFactory;
 
-	const showRecipesInCategory = function () {
-		recipeFactory.getRecipesInCategory($routeParams.id)
-		.then((recipesInCategory) => {
-			$scope.recipesInCategory = recipesInCategory;
+	const showRecipeDetails = function () {
+		recipeFactory.getRecipeDetails($routeParams.id)
+		.then((recipe) => {
+			$scope.recipe = recipe;
 		});
 	};
 
-	showRecipesInCategory();
+
+	showRecipeDetails();
 	
 
 });
