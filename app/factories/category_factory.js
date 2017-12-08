@@ -2,12 +2,16 @@
 
 console.log("category_factory.js is loading");
 
-app.factory("categoryFactory", function($q, $http) {
+app.factory("categoryFactory", function($q, $http, $injector, userFactory) {
 
 	const getAllCategories = function() {
        
         return $q((resolve, reject) => {
-            $http.get(`http://localhost:3000/categories`)
+            $http.get(`http://localhost:3000/categories`,{headers:
+                 {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
                 .then((object) => {
                    console.log("all categories object:", object.data);
                    resolve(object.data);
@@ -39,7 +43,11 @@ app.factory("categoryFactory", function($q, $http) {
  	const getRecipesInCategory = function(categoryId) {
        
         return $q((resolve, reject) => {
-            $http.get(`http://localhost:3000/categories/${categoryId}`)
+            $http.get(`http://localhost:3000/categories/${categoryId}`, {headers:
+                {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
                 .then((object) => {
                    console.log("Recipes in category obj:", object.data);
                    resolve(object.data);

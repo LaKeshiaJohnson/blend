@@ -13,11 +13,11 @@ app.config(($routeProvider) => {
 	})
 	.when('/signup', {
 		templateUrl: 'partials/signup.html',
-		controller: 'authCtrl',
+		controller: 'userCtrl',
 	})
 	.when('/login', {
 		templateUrl: 'partials/login.html',
-		controller: 'authCtrl',
+		controller: 'userCtrl',
 	})
 	.when('/categories', {
 		templateUrl: 'partials/all_categories.html',

@@ -3,84 +3,63 @@
 console.log("user_factory.js is loading");
 
 
-app.factory("userFactory", function ($q, $http) {
-	/*let currentUser = null;
-	let addNewUserObj = [];
+app.factory("userFactory", function ($q, $http, $injector) {
+	
 
-	const isAuthenticated = function () {
-		return new Promise((resolve, reject) => {
-			firebase.auth().onAuthStateChanged((user) => {
-				if (user) {
-					currentUser = user.uid;
-                    //console.log("user", user.id);
-					addNewUserObj.push({
-						userEmail: user.email
-					});
-					resolve(true);
-				}else {
-					resolve(false);
-				}
-			});
-		});
-	};
+    let currentUserToken = "";
+    let currentUserId = "";
+    let loggedIn = false;
 
-	const getCurrentUser = function() {
-	return currentUser;
-	};
+    const authTokenGetter = () => {
+        return currentUserToken;
+    };
 
-	const getUserInfo = function() {
-		return addNewUserObj;
-	};
+    const currentUserIdGetter = () => {
+        return currentUserId;
+    };
 
-	const logIn = function (userObj) {
-        return firebase.auth().signInWithEmailAndPassword(userObj.email, userObj.password)
-            .catch(function (error) {
-                let errorCode = error.code;
-                let errorMessage = error.message;
-                console.log("error", errorCode, errorMessage);
+    const getAllUsers = () => {
+    let UsersArray = [];
+        return $q((resolve, reject) => {
+            $http.get(`http://localhost:3000/users`, {
+                headers: {'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1MTI4MzE5NTd9.OY7b8PzuydU5TtZQK5s22qW-nQqyoC6QBd_0dxwjn40'}
+            }).then(results => {
+                resolve(results.data);
             });
+        });
     };
 
-    const logOut = function () {
-        console.log("logoutUser");
-        return firebase.auth().signOut();
-    };
-
-    const register = function (userObj) {
-        return firebase.auth().createUserWithEmailAndPassword(userObj.email, userObj.password)
-        .then(function addNewUser(userObj){
-                let addNewUsertoFB = {
-                    uid: userObj.uid,
-                    userEmail: userObj.email  
-                };
-
-                addNewUserObj.push(addNewUsertoFB);
-                console.log("newUSER.uid", addNewUsertoFB);
-                let newObj = JSON.stringify(addNewUsertoFB);
-                return $http.post(`${FBCreds.databaseURL}/users.json`, newObj)
-                    .then((data) => {
-                        //console.log("data", data);
-                        return data;
-                    }, (error) => {
-                        let errorCode = error.code;
-                        let errorMessage = error.message;
-                        console.log("error", errorCode, errorMessage);
-                    });
-        })
-        .catch(function (error) {
-                let errorCode = error.code;
-                let errorMessage = error.message;
-                console.log("error", errorCode, errorMessage);
+    const signUp = function(userObject) {
+        console.log("USER OBJECT", userObject);
+        return $q((resolve, reject) => {
+            console.log ("userObject again", userObject);
+            $http.post(`http://localhost:3000/users`, userObject)
+            .then( (data) => {
+                currentUserId = data.data.id;
+                console.log ("currentUserId", currentUserId);
+                resolve(data);
             });
+
+        });
     };
 
-    let provider = new firebase.auth.GoogleAuthProvider();
-
-    let authWithProvider = function () {
-        return firebase.auth().signInWithPopup(provider);
+    const login = (emailPasswordObject) => {
+        console.log("emailPasswordObject", emailPasswordObject);
+        return $q((resolve, reject) => {
+            $http.post(`http://localhost:3000/authenticate`, emailPasswordObject)
+             //console.log("AUTHENTICATED DATA RETURN", data);
+            .then(data => {
+                // console.log("AUTHENTICATED DATA RETURN", data);
+                currentUserToken = data.data.auth_token;
+                currentUserId = data.data.user_id;
+                loggedIn = true;
+                console.log ("token", currentUserToken, "user_id", currentUserId);
+                resolve(data);
+            });
+        });
     };
 
-    return {getCurrentUser, logIn, logOut, register, isAuthenticated, authWithProvider, getUserInfo};*/
+    return {getAllUsers, signUp, login, authTokenGetter, currentUserIdGetter};
         
 
 
