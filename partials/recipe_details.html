@@ -1,6 +1,4 @@
 
-
-
 	<div> {{recipe.title}}</div>
 	<div> {{recipe.description}}</div><br>
 	<p>INGREDIENTS:</p>
@@ -15,7 +13,9 @@
 	<div> {{recipe.directions}}</div>
 	<div> Notes: {{recipe.notes}}</div>
 
-	<div><p>add to favorites link</p></div>
+	<button ng-click="addToFavs()" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span> Add to Favorites</button>
+
+
 
 
 
