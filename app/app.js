@@ -7,9 +7,8 @@ const app = angular.module("BlendIt", ["ngRoute"]);
 app.config(($routeProvider) => {
 	$routeProvider
 	.when('/', {
-		templateUrl: 'partials/all_categories.html',
-		controller: 'categoryCtrl',
-			//resolve: {isAuth}
+		templateUrl: 'partials/welcome.html'
+		//controller: 'categoryCtrl',
 	})
 	.when('/signup', {
 		templateUrl: 'partials/signup.html',
@@ -22,17 +21,18 @@ app.config(($routeProvider) => {
 	.when('/categories', {
 		templateUrl: 'partials/all_categories.html',
 		controller: 'categoryCtrl',
-			//resolve: {isAuth}
 	})
 	.when('/category/:id', {
 		templateUrl: 'partials/single_category.html',
 		controller: 'recipeInCatCtrl',
-			//resolve: {isAuth}
 	})
 	.when('/recipe/:id', {
 		templateUrl: 'partials/recipe_details.html',
 		controller: "recipeCtrl",
-			//resolve: {isAuth}
+	})
+	.when('/favorites', {
+		templateUrl: 'partials/favorites.html',
+		controller: "favoritesCtrl",
 	});
 
-	});
+});
