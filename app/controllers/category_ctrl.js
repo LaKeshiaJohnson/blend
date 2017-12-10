@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("category_ctrl.js is loading");
+//console.log("category_ctrl.js is loading");
 
 app.controller("categoryCtrl", function ($scope, $route, categoryFactory, $location, $routeParams) {
 	$scope.category = [];
