@@ -24,9 +24,14 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
     const addToFavorites = function(obj) {
         console.log("add to favs obj:", obj);
         let newObj = JSON.stringify(obj);
-        return $http.post(`http://localhost:3000/favorites`, newObj)
+        return $http.post(`http://localhost:3000/favorites`, newObj,{headers:
+                {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
             .then( (data) => {
                 return data;
+                console.log("DATAAAA", data);
             }, (error) => {
                 let errorCode = error.code;
                 let errorMessage = error.message;

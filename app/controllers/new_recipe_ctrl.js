@@ -18,7 +18,7 @@ app.controller("newRecipeCtrl", function ($scope, $route, $routeParams, recipeFa
     $scope.recipe = {
   
         user_id: user,
-        category_id: "",
+        category_id: "1",
         title: "",
         description: "",
         ingredient1: "",
