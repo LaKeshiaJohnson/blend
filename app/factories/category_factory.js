@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("category_factory.js is loading");
+//console.log("category_factory.js is loading");
 
 app.factory("categoryFactory", function($q, $http, $injector, userFactory) {
 

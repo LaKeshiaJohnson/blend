@@ -1,0 +1,87 @@
+<h1>Add New Recipe</h1>
+  <div class="form-group row">
+      <div>
+        <h4>Recipe Name:</h4>
+        <input type="text" id="text" ng-model="recipe.title" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Select a category:</h4>
+        <select ng-model="recipe.category_id" ng-options="item.section for item in categories">
+        </select>
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Description:</h4>
+        <input type="text" id="text" ng-model="recipe.description" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredient 1:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient1" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredient 2:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient2" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredeint 3:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient3" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredient 4:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient4" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredient 5:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient5" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredient 6:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient6" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Ingredient 7:</h4>
+        <input type="text" id="text" ng-model="recipe.ingredient7" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Directions:</h4>
+        <input type="text" id="text" ng-model="recipe.directions" size="50">
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <div>
+        <h4>Notes:</h4>
+        <input type="text" id="text" ng-model="recipe.notes" size="50">
+      </div>
+  </div>
+
+  <button ng-click="submitRecipe()" class="btn btn-default">Submit</button>

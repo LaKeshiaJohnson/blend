@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("recipes_in_cat_ctrl.js is loading");
+//console.log("recipes_in_cat_ctrl.js is loading");
 
 app.controller("recipeInCatCtrl", function ($scope, $route, $routeParams, categoryFactory, $location) {
 	

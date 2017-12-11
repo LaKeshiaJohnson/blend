@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("recipe_ctrl.js is loading");
+//console.log("recipe_ctrl.js is loading");
 
 app.controller("recipeCtrl", function ($scope, $route, $routeParams, recipeFactory, $location) {
 	
