@@ -32,7 +32,7 @@ let currentUserToken;
     const signUp = function(userObject) {
         //console.log("USER OBJECT", userObject);
         return $q((resolve, reject) => {
-            console.log ("userObject again", userObject);
+            //console.log ("userObject again", userObject);
             $http.post(`http://localhost:3000/users`, userObject)
             .then( (data) => {
                 currentUserId = data.data.id;
@@ -44,11 +44,11 @@ let currentUserToken;
     };
 
     const login = (emailPasswordObject) => {
-        console.log("emailPasswordObject", emailPasswordObject);
+        //console.log("emailPasswordObject", emailPasswordObject);
         return $q((resolve, reject) => {
             $http.post(`http://localhost:3000/authenticate`, emailPasswordObject)
             .then(data => {
-                 console.log("AUTHENTICATED DATA RETURN", data);
+                 //console.log("AUTHENTICATED DATA RETURN", data);
                 currentUserToken = data.data.auth_token;
                 currentUserId = data.data.user_id;
                 loggedIn = true;
