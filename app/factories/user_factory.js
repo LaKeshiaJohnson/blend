@@ -6,8 +6,8 @@
 app.factory("userFactory", function ($q, $http, $injector) {
 	
 
-let currentUserToken = "";
-    let currentUserId = "";
+let currentUserToken;
+    let currentUserId;
     let loggedIn = false;
 
     const authTokenGetter = () => {
@@ -30,7 +30,7 @@ let currentUserToken = "";
     };
 
     const signUp = function(userObject) {
-        console.log("USER OBJECT", userObject);
+        //console.log("USER OBJECT", userObject);
         return $q((resolve, reject) => {
             console.log ("userObject again", userObject);
             $http.post(`http://localhost:3000/users`, userObject)
@@ -47,9 +47,8 @@ let currentUserToken = "";
         console.log("emailPasswordObject", emailPasswordObject);
         return $q((resolve, reject) => {
             $http.post(`http://localhost:3000/authenticate`, emailPasswordObject)
-             //console.log("AUTHENTICATED DATA RETURN", data);
             .then(data => {
-                // console.log("AUTHENTICATED DATA RETURN", data);
+                 console.log("AUTHENTICATED DATA RETURN", data);
                 currentUserToken = data.data.auth_token;
                 currentUserId = data.data.user_id;
                 loggedIn = true;

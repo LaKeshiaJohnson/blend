@@ -17,23 +17,13 @@ $scope.user = {
 		const userObjString = JSON.stringify(userObj);
 		userFactory.signUp(userObjString)
 			.then((data) => {
+				//$scope.login();
 				$location.url("/categories");
 				// console.log ("DATA FROM USER SUBMIT", data);
 				
 		});
 	};
 
-	/*userFactory.signUp({
-			first_name: $scope.user.first_name,
-			last_name: $scope.user.last_name,
-			email: $scope.user.email,
-			password: $scope.user.password
-		})
-		.then((data) => {
-			console.log("user controller-new user:", data);
-			$location.path("/categories");
-		});
-	};*/
 
 
 	$scope.login = () => {
