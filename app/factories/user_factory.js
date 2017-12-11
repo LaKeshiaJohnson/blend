@@ -1,12 +1,12 @@
 "use strict";
 
-console.log("user_factory.js is loading");
+//console.log("user_factory.js is loading");
 
 
 app.factory("userFactory", function ($q, $http, $injector) {
 	
 
-    let currentUserToken = "";
+let currentUserToken = "";
     let currentUserId = "";
     let loggedIn = false;
 

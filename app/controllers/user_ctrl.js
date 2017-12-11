@@ -1,10 +1,10 @@
 "use strict";
 
-console.log("user controller has loaded");
+//console.log("user controller has loaded");
 
 app.controller("userCtrl", function ($scope, $window, userFactory, $location) {
 
-	$scope.user = {
+$scope.user = {
 		first_name: "",
 		last_name: "",
 		email: "",

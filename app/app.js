@@ -33,6 +33,10 @@ app.config(($routeProvider) => {
 	.when('/favorites', {
 		templateUrl: 'partials/favorites.html',
 		controller: "favoritesCtrl",
+	})
+	.when('/newrecipe', {
+		templateUrl: 'partials/new_recipe.html',
+		controller: "newRecipeCtrl"
 	});
 
 });

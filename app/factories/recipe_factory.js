@@ -35,7 +35,20 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
 
     };
 
+    const addNewRecipe = function(obj) {
+        let newObj = JSON.stringify(obj);
+        return $http.post(`http://localhost:3000/recipes`, newObj)
+        .then ( (data) => {
+            //console.log("new recipe data:", data);
+            return data;
+        }, (error) => {
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            console.log("error", errorCode, errorMessage);
+        });
+    };
 
 
-    return {getRecipeDetails, addToFavorites};
+
+    return {getRecipeDetails, addToFavorites, addNewRecipe};
  });
