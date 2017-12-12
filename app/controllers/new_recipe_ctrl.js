@@ -18,7 +18,7 @@ app.controller("newRecipeCtrl", function ($scope, $route, $routeParams, recipeFa
     $scope.recipe = {
   
         user_id: user,
-        category_id: "1",
+        category_id: "",
         title: "",
         description: "",
         ingredient1: "",
@@ -33,7 +33,7 @@ app.controller("newRecipeCtrl", function ($scope, $route, $routeParams, recipeFa
     };
 
     $scope.submitRecipe = function() {
-    	console.log("you clicked on the submit recipe button");
+    	//console.log("you clicked on the submit recipe button");
         recipeFactory.addNewRecipe($scope.recipe)
             .then((data) => {
                // console.log("DATA from add recipe ctrl", data);             
