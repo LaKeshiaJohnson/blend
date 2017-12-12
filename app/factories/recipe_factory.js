@@ -41,7 +41,11 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
 
     const addNewRecipe = function(obj) {
         let newObj = JSON.stringify(obj);
-        return $http.post(`http://localhost:3000/recipes`, newObj)
+        return $http.post(`http://localhost:3000/recipes`, newObj,{headers:
+                {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+        })
         .then ( (data) => {
             //console.log("new recipe data:", data);
             return data;
