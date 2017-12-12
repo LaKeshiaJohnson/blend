@@ -56,7 +56,25 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
         });
     };
 
+    const getMyRecipes = function() {
+        return $q((resolve, reject) => {
+            $http.get(`http://localhost:3000/myrecipes`, {headers:
+                {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
+                .then((object) => {
+                   console.log("my recipes DETAILS:", object.data);
+                   resolve(object.data);
+                })
+
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    };
 
 
-    return {getRecipeDetails, addToFavorites, addNewRecipe};
+
+    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes};
  });

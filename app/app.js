@@ -36,7 +36,11 @@ app.config(($routeProvider) => {
 	})
 	.when('/newrecipe', {
 		templateUrl: 'partials/new_recipe.html',
-		controller: "newRecipeCtrl"
+		controller: "newRecipeCtrl",
+	})
+	.when('/myrecipes', {
+		templateUrl: 'partials/my_recipes.html',
+		controller: "myRecipesCtrl"
 	});
 
 });
