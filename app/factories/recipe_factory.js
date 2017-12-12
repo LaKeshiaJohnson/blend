@@ -31,7 +31,6 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
             })
             .then( (data) => {
                 return data;
-                console.log("DATAAAA", data);
             }, (error) => {
                 let errorCode = error.code;
                 let errorMessage = error.message;

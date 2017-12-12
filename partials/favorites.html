@@ -1,8 +1,8 @@
 <h1>My Favorites</h1>
 
 
-<div ng-repeat="recipe in favorites">
-
-	<a ng-href="#!/recipe/{{recipe.id}}"> {{recipe.title}}</a>
+<div ng-repeat="item in favs">
+ recipe id: {{item.recipe_id}}  <a ng-href="#!/recipe/{{item.recipe_id}}">View</a> | <a ng-click="destroyFavorite(item.id)">Remove</a>
+ 	
 
 </div>
