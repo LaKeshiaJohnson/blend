@@ -1,0 +1,8 @@
+<h1>My Created Recipes</h1>
+
+
+<div ng-repeat="item in myrecipes">
+ recipe name: {{item.title}}  <a ng-href="#!/recipe/{{item.id}}">View</a> | <a ng-click="(item.id)">Remove</a>
+ 	
+
+</div>
