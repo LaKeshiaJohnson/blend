@@ -74,7 +74,26 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
         });
     };
 
+    const getAllRecipes = function() {
+       
+        return $q((resolve, reject) => {
+            $http.get(`http://localhost:3000/recipes`,{headers:
+                 {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
+                .then((object) => {
+                   //console.log("all categories object:", object.data);
+                   resolve(object.data);
+                })
+
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    };
 
 
-    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes};
+
+    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes, getAllRecipes};
  });
