@@ -1,8 +1,9 @@
 <h1>All Recipes</h1>
 
+<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" ng-model="searchText"><br>
 
-<div ng-repeat="recipe in allrecipes">
+<div ng-repeat="recipe in allrecipes | filter: searchText">
 
-	<a ng-href="#!/recipe/{{recipe.id}}"> {{recipe.title}}</a>
-
+	<div><a ng-href="#!/recipe/{{recipe.id}}"> {{recipe.title}}</a></div>
+	<br>
 </div>
