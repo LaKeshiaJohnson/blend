@@ -51,8 +51,8 @@ app.factory("categoryFactory", function($q, $http, $injector, userFactory) {
             })
                 .then((object) => {
                     let objectCollection = object.data;
-                   console.log("OBJECT COLLECTION:", objectCollection);
-                   console.log("OBJ COLLECTION . SECTION", objectCollection.section);
+                   //console.log("OBJECT COLLECTION:", objectCollection);
+                   //console.log("OBJ COLLECTION . SECTION", objectCollection.section);
                     let categoryName = objectCollection.section;
                    // console.log("CATEGORY NAME:", categoryName);
                     resolve(categoryName);

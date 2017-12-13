@@ -12,12 +12,12 @@ app.controller("favoritesCtrl", function ($scope, $route, $routeParams, recipeFa
 		.then((favs) => {
 			//console.log("show user favorites:", favs);
 			$scope.favs = favs;
-		});
+		})
 		/*.then(() => {
-			recipeFactory.getRecipeDetails()
-			.then((names) => {
-				$scope.recipeNames = names;
-			});
+			recipeFactory.getRecipeName($routeParams.id)
+				.then ((object) => {
+					$scope.recipeName = object;
+				});
 		});*/
 	};
 
