@@ -2,7 +2,7 @@
 
 
 <div ng-repeat="item in favs">
- recipe id: {{item.recipe_id}}  <a ng-href="#!/recipe/{{item.recipe_id}}">View</a> | <a ng-click="destroyFavorite(item.id)">Remove</a>
+ recipe id: {{item.recipe_id}} - Recipe Name: {{item.recipe.title}} <a ng-href="#!/recipe/{{item.recipe_id}}">View</a> | <a ng-click="destroyFavorite(item.id)">Remove</a>
  	
 
 </div>

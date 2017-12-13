@@ -5,9 +5,6 @@
 app.controller("recipeCtrl", function ($scope, $route, $routeParams, recipeFactory, userFactory, $location) {
 	
 	$scope.recipe = [];
-	//let user = authFactory.getCurrentUser();
-	//$rootScope.showSearch = true;
-    //$scope.searchText = filterFactory;
 
 	const showRecipeDetails = function () {
 		recipeFactory.getRecipeDetails($routeParams.id)
@@ -23,6 +20,7 @@ app.controller("recipeCtrl", function ($scope, $route, $routeParams, recipeFacto
     $scope.favorites = {
     	user_id: user,
     	recipe_id: $routeParams.id,
+    	
 
     };
 	
