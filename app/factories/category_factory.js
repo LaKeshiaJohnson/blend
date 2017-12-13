@@ -42,17 +42,17 @@ app.factory("categoryFactory", function($q, $http, $injector, userFactory) {
         });
     };
 
-    const getCategoryName = function() {
+    const getCategoryName = function(id) {
         return $q((resolve, reject) => {
-            $http.get(`http://localhost:3000/categories`,{headers:
+            $http.get(`http://localhost:3000/categoryname/${id}`,{headers:
                 {
                     'Authorization': `${userFactory.authTokenGetter()}`,
                 },
             })
                 .then((object) => {
                     let objectCollection = object.data;
-                   //console.log("OBJECT COLLECTION:", objectCollection);
-                   //console.log("OBJ COLLECTION . SECTION", objectCollection.section);
+                   console.log("OBJECT COLLECTION:", objectCollection);
+                   console.log("OBJ COLLECTION . SECTION", objectCollection.section);
                     let categoryName = objectCollection.section;
                    // console.log("CATEGORY NAME:", categoryName);
                     resolve(categoryName);
