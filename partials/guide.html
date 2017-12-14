@@ -1,0 +1,142 @@
+<h1>The Perfect Blend</h1>
+<br>
+
+  <p><i>Click on an ingredient to learn about its benefits.</i></p>
+
+<script>
+  $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+
+<!-- <div ng-repeat="item in guide">
+<button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="" data-content="{{item.description}}">{{item.item}}</button> 
+</div> -->
+
+
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>2 Cups<br>Leafy Greens</th>
+        <th>2 Cups<br>Liquid Base</th>
+        <th>3 Cups<br>Ripe Fruit</th>
+        <th>Boost It!</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Kale" data-content="Loaded with heart-protecting, anti-cancer, and anti-inflammatory phenols.">Kale</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Water" data-content="">Water</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Apple" data-content="Antioxidant rich and high in fiber. Believed to help fight cancer, heart disease, weight gain, and high cholestrol.">Apple</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Almonds" data-content="Rich in monounsaturated fats, high in heart-healthy magnesium, and blood pressure regulating potassium.">Almonds</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Romaine" data-content="This popular lettuce supports heart health with its wealth of vitamins A, K, and C.">Romaine</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Coconut Water" data-content=".">Coconut Water</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Avocado" data-content="Rich in vitamins, minerals, and protein. Avocados contain the highest concentrations of monounsaturated fats among all fruits.">Avocado</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Cashews" data-content="Known for its high monounsaturated fat content. These fats contain heart-healthy oleic acid which is healthful for diabetics.">Cashews</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Spinach" data-content="Contains blood pressure reducing proteins called peptides, cancer fighting phytonutrients, and bone building vitamin K.">Spinach</button>
+        </td>
+        <td><button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Coconut Milk" data-content=".">Coconut Milk</button></td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Blueberries" data-content="Contain vitamin C, and vitamin K. High in fiber and renowned for anti-inflammatory and cancer fighting chemicals.">Blueberries</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Chia Seeds" data-content="Contains a super blend of protein, carbs, fat, and fiber, making it an ideal energy booster. Also high in Omega-3 and Omega-6 fatty acids.">Chia Seeds</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Spring Greens" data-content="Contains a super blend of protein, carbs, fat, and fiber, making it an ideal energy booster. Also high in Omega-3 and Omega-6 fatty acids.">Spring Greens</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Almond Milk" data-content="Rich in monounsaturated fats, high in heart-healthy magnesium, and blood pressure regulating potassium.">Almond Milk</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Kiwi" data-content="Rich source of vitamin C and dietary fiber. Omega-3 fatty acids within its seeds may reduce the risk of blood clots.">Kiwi</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Flax Seeds" data-content="Rich in Omega-3 fatty acids. Also supply a healthy dose of dietary fiber, and contain orgainc compunds that help lower cholesterol.">Flax Seeds</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Swiss Chard" data-content="Offers dietary fiber, which helps reuglate blood sugar levels. Also contains vitamins C, E, K, and beta-carotene.">Swiss Chard</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Cashew Milk" data-content="">Cashew Milk</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Oranges" data-content="Rich in vitamin C. Citrus appears to offer the most significant protection against mouth and stomach cancers.">Oranges</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Goji Berries" data-content="This antioxidant powerhouse is renowned for slowing the aging process, boosting brain cell counts, and protecting the body against disease.">Goji Berries</button>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Peaches" data-content="Packed with vitamin C, beta-carotene, and antioxidants.">Peaches</button>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Pineapples" data-content="Pineapples contain minerals and vitamins that support immunity, soothe digestion, and provide anti-inflammatory benefits.">Pineapples</button>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Strawberries" data-content="Loaded with heart-protecting, anti-cancer, and anti-inflammatory phenols.">Strawberries</button>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button type="button" class="btn btn-sm btn-light" data-toggle="popover" title="Watermelon" data-content="Loaded with vitamin A, vitamnin C, and lycopene, which helps to neutralize free radicals.">Watermelon</button>
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div>
+    <h4>Directions:</h4>
+    <p>1.Blend leafy greens and liquid base.</p>
+    <p>2.Add fruit and blend again.</p>
+    <p>Note: Use at least 1 frozen fruit to chill msoothie. Makes about 32 ounces (2 servings).</p>
+  </div>
+
+  
+
+
