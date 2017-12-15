@@ -1,18 +1,17 @@
+<div class="forms">
+ <h1>Please sign in</h1>
 
- <h1>Login</h1>
   <div class="form-group row">
       <div>
-      <h3>Email address:</h3>
-      
-       <input type="email" id="email" ng-model="user.email" size="50">
+      <input type="email" class="input" id="email" ng-model="user.email" placeholder="Email address" size="50">
       </div>
   </div>
 
   <div class="form-group row">
     <div>
-      <h3>Password:</h3>
-      <input type="password" id="pwd" ng-model="user.password" size="50">
+      <input type="password" class ="input" id="pwd" ng-model="user.password" placeholder="Password" size="50">
     </div>
   </div>
-  <button ng-click="login()" class="btn btn-default">Login</button>
+  <button ng-click="login()" class="btn btn-outline-success">Login</button>
 
+</div>

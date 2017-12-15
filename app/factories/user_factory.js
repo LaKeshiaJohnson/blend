@@ -18,7 +18,20 @@ let currentUserToken;
         return currentUserId;
     };
 
-    const getAllUsers = () => {
+    const isLoggedIn = () => {
+        console.log ("logged in status in user factory", loggedIn);
+        return loggedIn;
+    };
+
+    const logOut = () => {
+        loggedIn = false;
+        console.log ("User is logged out.");
+        currentUserToken = null;
+        currentUserId = null;
+        console.log ("Current User Info After Logout", "logged in?", loggedIn, "token?", currentUserToken, "user id?", currentUserId);  
+    };
+
+    /*const getAllUsers = () => {
     let UsersArray = [];
         return $q((resolve, reject) => {
             $http.get(`http://localhost:3000/users`, {
@@ -27,7 +40,7 @@ let currentUserToken;
                 resolve(results.data);
             });
         });
-    };
+    };*/
 
     const signUp = function(userObject) {
         //console.log("USER OBJECT", userObject);
@@ -58,7 +71,7 @@ let currentUserToken;
         });
     };
 
-    return {getAllUsers, signUp, login, authTokenGetter, currentUserIdGetter};
+    return {signUp, login, authTokenGetter, currentUserIdGetter, isLoggedIn, logOut};
         
 
 

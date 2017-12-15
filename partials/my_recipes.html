@@ -2,7 +2,7 @@
 
 
 <div ng-repeat="item in myrecipes">
- recipe name: {{item.title}}  <a ng-href="#!/recipe/{{item.id}}">View</a> | <a ng-click="(item.id)">Remove</a>
+ <a ng-href="#!/recipe/{{item.id}}">{{item.title}}</a> <!-- | <a ng-click="(item.id)">Remove</a> -->
  	
 
 </div>
