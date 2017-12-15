@@ -12,7 +12,7 @@ app.controller("favoritesCtrl", function ($scope, $route, $routeParams, recipeFa
 		.then((favs) => {
 			//console.log("show user favorites:", favs);
 			$scope.favs = favs;
-		})
+		});
 		/*.then(() => {
 			recipeFactory.getRecipeName($routeParams.id)
 				.then ((object) => {
@@ -26,7 +26,7 @@ app.controller("favoritesCtrl", function ($scope, $route, $routeParams, recipeFa
         .then((taco) => {
             $route.reload();
         });
-    }
+    };
 
  	showFavorites();
 });

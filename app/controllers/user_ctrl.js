@@ -42,5 +42,13 @@ $scope.user = {
 		});
 	};*/
 
+	$scope.isLoggedIn = function () {
+		return userFactory.isLoggedIn();
+	};
+
+ 	$scope.logout = function() {
+		userFactory.logOut();
+		 $location.url("");
+	};
 });
 
