@@ -62,6 +62,10 @@ app.config(($routeProvider) => {
 		templateUrl: 'partials/guide.html',
 		controller: "guideCtrl",
 			//resolve: {isAuth}
+	})
+	.when('/recipe/:id/edit', {
+		templateUrl: 'partials/edit_recipe.html',
+		controller: "editRecipeCtrl",
 	});
 
 });

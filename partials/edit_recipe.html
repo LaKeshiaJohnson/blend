@@ -1,0 +1,65 @@
+<h1>Edit Recipe</h1>
+
+qqqqqqqqqqqqqqqq
+<div>
+        <h5>Select a category:</h5>
+        <select ng-model="recipe.category_id" ng-options="item.id as item.section for item in categories">
+        </select>    
+  </div>
+  <div class="row">
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.title" size="50" placeholder="Recipe Name">
+      </div>
+
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.description" size="50" placeholder="Description">    
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient1" size="50" placeholder="Ingredient 1">
+      </div>
+
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient2" size="50" placeholder="Ingredient 2">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient3" size="50" placeholder="Ingredient 3">
+      </div>
+
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient4" size="50" placeholder="Ingredient 4">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient5" size="50" placeholder="Ingredient 5">
+      </div>
+
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient6" size="50" placeholder="Ingredient 6">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.ingredient7" size="50" placeholder="Ingredient 7">
+      </div>
+
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.directions" size="50" placeholder="Directions">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col">
+        <input class="input" type="text" id="text" ng-model="recipe.notes" size="50" placeholder="Notes">
+      </div>
+  </div>
+  <br>
+  <button ng-click="submitEditedRecipe()" class="btn btn-outline-success">Submit</button>

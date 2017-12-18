@@ -11,7 +11,7 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
                 },
             })
                 .then((object) => {
-                   console.log("RECIPE DETAILS:", object.data);
+                   //console.log("RECIPE DETAILS:", object.data);
                    resolve(object.data);
                 })
 
@@ -64,7 +64,7 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
                 },
             })
                 .then((object) => {
-                   console.log("my recipes DETAILS:", object.data);
+                   //console.log("my recipes DETAILS:", object.data);
                    resolve(object.data);
                 })
 
@@ -102,8 +102,8 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
             })
                 .then((object) => {
                     let objectCollection = object.data;
-                   console.log("OBJECT COLLECTION:", objectCollection);
-                   console.log("OBJ COLLECTION . TITLE", objectCollection.title);
+                   //console.log("OBJECT COLLECTION:", objectCollection);
+                   //console.log("OBJ COLLECTION . TITLE", objectCollection.title);
                     let recipeName = objectCollection.title;
                    // console.log("CATEGORY NAME:", categoryName);
                     resolve(recipeName);
@@ -114,6 +114,24 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
         });
     };
 
+    const editRecipe = function(id, obj) {
+        console.log("id and obj to update", id, obj);
+        return $q((resolve, reject) => {
+            //let newObj = angular.toJson(obj);
+            let newObj = JSON.stringify(obj);
+            $http.patch(`http://localhost:3000/recipes/${id}`, newObj, {headers:
+                {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
+            .then((data) => {
+                resolve(data);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+        });
+    };
 
-    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes, getAllRecipes, getRecipeName};
+    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes, getAllRecipes, getRecipeName, editRecipe};
  });

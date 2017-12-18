@@ -19,7 +19,7 @@ let currentUserToken;
     };
 
     const isLoggedIn = () => {
-        console.log ("logged in status in user factory", loggedIn);
+        //console.log ("logged in status in user factory", loggedIn);
         return loggedIn;
     };
 
@@ -28,7 +28,7 @@ let currentUserToken;
         console.log ("User is logged out.");
         currentUserToken = null;
         currentUserId = null;
-        console.log ("Current User Info After Logout", "logged in?", loggedIn, "token?", currentUserToken, "user id?", currentUserId);  
+        //console.log ("Current User Info After Logout", "logged in?", loggedIn, "token?", currentUserToken, "user id?", currentUserId);  
     };
 
     /*const getAllUsers = () => {
