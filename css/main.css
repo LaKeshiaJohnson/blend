@@ -1,5 +1,6 @@
-.hero-image {
+body {
   background-image: url("../app/images/green-smoothie.jpg");
+  margin: 0;
   min-height: 75vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,5 +17,19 @@
   font-family: 'Dancing Script', cursive;
   font-size: 190px;
   margin-top: 150px; }
+
+#nav-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px; }
+
+.cat {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /*# sourceMappingURL=main.css.map */
