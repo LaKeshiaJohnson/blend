@@ -1,20 +1,24 @@
 
 	<h1> {{recipe.title}}</h1>
-	<div> {{recipe.description}}</div><br>
-	<p>INGREDIENTS:</p>
-	<div> {{recipe.ingredient1}}</div>
-	<div> {{recipe.ingredient2}}</div>
-	<div> {{recipe.ingredient3}}</div>
-	<div> {{recipe.ingredient4}}</div>
-	<div> {{recipe.ingredient5}}</div>
-	<div> {{recipe.ingredient6}}</div>
-	<div> {{recipe.ingredient7}}</div><br>
-	<p>DIRECTIONS:</p>
-	<div> {{recipe.directions}}</div>
-	<div> Notes: {{recipe.notes}}</div>
+	<i><p> {{recipe.description}}</p></i>
+	<br>
+	<b><p>INGREDIENTS:</p></b>
+	<p>{{recipe.ingredient1}}</p>
+	<p>{{recipe.ingredient2}}</p>
+	<p>{{recipe.ingredient3}}</p>
+	<p>{{recipe.ingredient4}}</p>
+	<p>{{recipe.ingredient5}}</p>
+	<p>{{recipe.ingredient6}}</p>
+	<p>{{recipe.ingredient7}}</p>
+	<br>
+	<b><p>DIRECTIONS:</p></b>
+	<p>{{recipe.directions}}</p>
+	<br>
+	<p>Notes:<i>{{recipe.notes}}</i></p>
 	<br>
 
-	<button ng-click="addToFavorites()" class="btn btn-default">add to favs</button>
+	<button ng-click="addToFavorites()" class="btn btn-outline-success">Add to favorites</button>
+
 
 
 

@@ -2,7 +2,7 @@
 
 console.log("app.js is loading");
 
-const app = angular.module("BlendIt", ["ngRoute"]);
+const app = angular.module("Blend", ["ngRoute"]);
 
 let isAuth = (userFactory) => {
 	//console.log ("value of isAuth function", userFactory.isAuthenticated());

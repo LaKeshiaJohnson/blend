@@ -3,7 +3,7 @@
   "main": "index.html",
   "author": "LaKeshiaJohnson",
   "license": "ISC",
-  "name": "BlendIt",
+  "name": "Blend",
   "version": "0.1.0",
   "devDependencies": {
     "bootstrap": "^3.3.7",
