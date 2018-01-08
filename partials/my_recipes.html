@@ -1,5 +1,7 @@
-<h1>My Created Recipes</h1>
+<!-- displays all recipes a user has created. uses my_recipes_ctrl.js
+link to view recipe details and option to edit recipe -->
 
+<h1>My Created Recipes</h1>
 
 <div ng-repeat="item in myrecipes">
  <a ng-href="#!/recipe/{{item.id}}">{{item.title}}</a> | <a ng-href="#!/recipe/{{item.id}}/edit">Edit</a>

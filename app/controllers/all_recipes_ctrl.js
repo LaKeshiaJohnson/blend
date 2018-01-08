@@ -16,3 +16,7 @@ app.controller("allRecipesCtrl", function ($scope, $route, $routeParams, recipeF
 	showAllRecipes();
 
 });
+
+//calls getAllRecipes in the recipe_factory.js. 
+//The factory makes a call to the rails database and returns the recipes.
+//used in all_recipes.html

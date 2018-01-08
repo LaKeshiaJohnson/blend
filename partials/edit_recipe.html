@@ -1,10 +1,11 @@
+<!-- form to edit a recipe. uses edit_recipe_ctrl.js -->
 <h1>Edit Recipe</h1>
 
 
-<div>
-        <h5>Select a category:</h5>
-        <select ng-model="recipe.category_id" ng-options="item.id as item.section for item in categories">
-        </select>    
+  <div>
+    <h5>Select a category:</h5>
+    <select ng-model="recipe.category_id" ng-options="item.id as item.section for item in categories">
+    </select>    
   </div>
   <div class="row">
       <div class="col">
@@ -63,3 +64,4 @@
   </div>
   <br>
   <button ng-click="submitEditedRecipe()" class="btn btn-outline-success">Submit</button>
+  

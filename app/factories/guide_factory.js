@@ -1,7 +1,9 @@
 "use strict";
-//console.log("favorites factory loading");
+
+//handles calls for the prefect blend ingredient guide
 app.factory("guideFactory", function($q, $http, userFactory, recipeFactory) {
 
+//called from guide_ctrl.js
     const getGuide = function() {
         return $q((resolve, reject) => {
             $http.get(`http://localhost:3000/guides`, {headers:

@@ -1,6 +1,7 @@
 "use strict";
 
-//console.log("recipes_in_cat_ctrl.js is loading");
+//calls getRecipesInCategory  and getCategoryName in category factory
+//used in single_category.html
 
 app.controller("recipeInCatCtrl", function ($scope, $route, $routeParams, categoryFactory, $location) {
 	

@@ -1,6 +1,6 @@
 "use strict";
 
-//console.log("guide_ctrl.js is loading");
+//calls getGuide in the guide_factory.
 
 app.controller("guideCtrl", function ($scope, $route, $location, $routeParams, guideFactory) {
 	$scope.guide = [];

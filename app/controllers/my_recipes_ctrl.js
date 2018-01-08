@@ -1,6 +1,7 @@
 "use strict";
 
-console.log("my_recipes_ctrl.js is loading");
+//calls getMyRecipes in the recipeFactory to get all recipes a user has submitted.
+//used in my_recipes.html
 
 app.controller("myRecipesCtrl", function ($scope, $route, $routeParams, recipeFactory, userFactory, favoritesFactory, $location) {
 	$scope.myrecipes = [];

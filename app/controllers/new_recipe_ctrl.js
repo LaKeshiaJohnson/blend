@@ -1,7 +1,9 @@
 "use strict";
+//calls addNewRecipe in the recipe factory. used in new_recipe.html
 
 app.controller("newRecipeCtrl", function ($scope, $route, $routeParams, recipeFactory, userFactory, $location) {
 	
+    //drop down menu to select category
 	$scope.categories = [
         {section : "Overall Health", id : "1"},
         {section : "Better Immunity", id : "2"},
@@ -14,7 +16,7 @@ app.controller("newRecipeCtrl", function ($scope, $route, $routeParams, recipeFa
     ];
 	
 	let user = userFactory.currentUserIdGetter();
-
+//form for new recipe
     $scope.recipe = {
   
         user_id: user,

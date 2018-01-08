@@ -38,4 +38,8 @@ body {
   align-items: center;
   justify-content: center; }
 
+a.cat:hover, a.ng-binding:hover, a:hover {
+  text-decoration: none;
+  color: green; }
+
 /*# sourceMappingURL=main.css.map */

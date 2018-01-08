@@ -1,11 +1,13 @@
 "use strict";
 
-console.log("edit_recipe_ctrl.js is loading");
+//calls getRecipeDetails and editRecipe in the recipe_factory.js. 
+//used in edit_recipe.html
 
 app.controller("editRecipeCtrl", function ($scope, $route, $routeParams, recipeFactory, userFactory, $location) {
 	
 	let user = userFactory.currentUserIdGetter();
 
+//drop down menu to select a category
 	$scope.categories = [
         {section : "Overall Health", id : "1"},
         {section : "Better Immunity", id : "2"},
@@ -17,6 +19,7 @@ app.controller("editRecipeCtrl", function ($scope, $route, $routeParams, recipeF
         {section : "Heart Health", id : "8"}
     ];
 
+//form to edit redit recipe
     $scope.recipe = {
   
         user_id: user,
