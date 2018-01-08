@@ -17,3 +17,6 @@ app.controller("categoryCtrl", function ($scope, $route, categoryFactory, $locat
 	showAllCategories();
 
 });
+
+
+//used in all_categories.html

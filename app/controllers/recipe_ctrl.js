@@ -1,6 +1,7 @@
 "use strict";
 
-//console.log("recipe_ctrl.js is loading");
+//calls getRecipeDetails and addToFavorites in the recipe factory
+//used in recipe_details.html
 
 app.controller("recipeCtrl", function ($scope, $route, $routeParams, recipeFactory, userFactory, $location) {
 	

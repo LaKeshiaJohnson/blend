@@ -1,6 +1,6 @@
 "use strict";
 
-//console.log("user_factory.js is loading");
+//handles authentication and api calls for login/register
 
 
 app.factory("userFactory", function ($q, $http, $injector) {
@@ -31,16 +31,6 @@ let currentUserToken;
         //console.log ("Current User Info After Logout", "logged in?", loggedIn, "token?", currentUserToken, "user id?", currentUserId);  
     };
 
-    /*const getAllUsers = () => {
-    let UsersArray = [];
-        return $q((resolve, reject) => {
-            $http.get(`http://localhost:3000/users`, {
-                headers: {'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1MTI4MzE5NTd9.OY7b8PzuydU5TtZQK5s22qW-nQqyoC6QBd_0dxwjn40'}
-            }).then(results => {
-                resolve(results.data);
-            });
-        });
-    };*/
 
     const signUp = function(userObject) {
         //console.log("USER OBJECT", userObject);

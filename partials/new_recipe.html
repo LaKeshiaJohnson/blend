@@ -1,6 +1,10 @@
+<!-- form to create a new recipe. uses new_recipe_ctrl.js -->
 <h1>Add New Recipe</h1>
 
   <div>
+    <!-- ng-options: drop down items/names of categories. 
+    item.id as item.section: for each item in categories,
+    capture/save the item id when the item section(name of category) is selected -->
         <h5>Select a category:</h5>
         <select ng-model="recipe.category_id" ng-options="item.id as item.section for item in categories">
         </select>    

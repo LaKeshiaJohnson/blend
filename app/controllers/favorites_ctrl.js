@@ -1,6 +1,7 @@
 "use strict";
 
-//console.log("favorites_ctrl.js is loading");
+//calls getFavorites and destroyFavorite in the favorites_factory.js. 
+//used in favorites.html
 
 app.controller("favoritesCtrl", function ($scope, $route, $routeParams, recipeFactory, userFactory, favoritesFactory, $location) {
 	$scope.favs = [];
@@ -13,12 +14,6 @@ app.controller("favoritesCtrl", function ($scope, $route, $routeParams, recipeFa
 			//console.log("show user favorites:", favs);
 			$scope.favs = favs;
 		});
-		/*.then(() => {
-			recipeFactory.getRecipeName($routeParams.id)
-				.then ((object) => {
-					$scope.recipeName = object;
-				});
-		});*/
 	};
 
 	$scope.destroyFavorite = function (id) {

@@ -1,8 +1,8 @@
-<h1>My Favorites</h1>
+<!-- displays a user's favorite recipes, along with the link to the recipe, and option to remove it from the favorties.
+uses favorites_ctrl.js -->
 
+<h1>My Favorites</h1>
 
 <div ng-repeat="item in favs">
  <a ng-href="#!/recipe/{{item.recipe_id}}">{{item.recipe.title}}</a> | <a ng-click="destroyFavorite(item.id)">Remove</a>
- 	
-
 </div>

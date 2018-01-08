@@ -1,6 +1,8 @@
 "use strict";
 
 //console.log("user controller has loaded");
+//calls the user_factory.js to handle auth functionality
+//used in signup, login, and nav partials
 
 app.controller("userCtrl", function ($scope, $window, userFactory, $location) {
 
@@ -34,13 +36,7 @@ $scope.user = {
 				// console.log ("DATA BACK TO CONTROLLER", data);
 			});
 	};
-		/*.then (data => {
-			$scope.creds.auth_token = data;
-			console.log("DATA token", data);
-			$location.path("/categories");
-                //$scope.apply();
-		});
-	};*/
+	
 
 	$scope.isLoggedIn = function () {
 		return userFactory.isLoggedIn();
