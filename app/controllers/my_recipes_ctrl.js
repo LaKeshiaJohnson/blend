@@ -17,6 +17,13 @@ app.controller("myRecipesCtrl", function ($scope, $route, $routeParams, recipeFa
 		
 	};
 
+	$scope.deleteMyRecipe = function(id){
+        recipeFactory.destroyMyRecipe(id)
+        .then((irrelevant) => {
+            showMyRecipes();
+        });
+    };
+
 	showMyRecipes();
 
 });
