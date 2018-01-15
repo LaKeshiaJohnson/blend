@@ -100,6 +100,23 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
         });
     };
 
+    const destroyMyRecipe = function(id){
+            //console.log("item id", id);
+        return $q((resolve, reject) => {
+            $http.delete(`http://localhost:3000/recipes/${id}`, {headers:
+                {
+                    'Authorization': `${userFactory.authTokenGetter()}`,
+                },
+            })
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+        });
+    };
+
 //not being used
  /*   const getRecipeName = function(id) {
         return $q((resolve, reject) => {
@@ -143,5 +160,5 @@ app.factory("recipeFactory", function($q, $http, categoryFactory, userFactory) {
         });
     };
 
-    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes, getAllRecipes, editRecipe};
+    return {getRecipeDetails, addToFavorites, addNewRecipe, getMyRecipes, getAllRecipes, editRecipe, destroyMyRecipe};
  });
