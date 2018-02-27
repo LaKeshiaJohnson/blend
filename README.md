@@ -44,6 +44,13 @@ After everything is installed, run grunt inside your lib folder:
 grunt
 ```
 
+Then open a new terminal tab and run:
+```
+hs -o
+```
+
+This app also needs the [Smoothie Api](https://github.com/LaKeshiaJohnson/smoothie-api) to run. Please visit the Smoothie API repo in order to get the API running on your machine.
+
 ## Built With
 * [AngularJS](https://angularjs.org/) - Javascript framework.
 * [Boostrap 4](https://getboostrap.com) - Open source toolkit for developing with HTML, CSS, and JS.
